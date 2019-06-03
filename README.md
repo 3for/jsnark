@@ -118,6 +118,10 @@ To summarize the steps needed:
 #### Running circuit outputs on libsnark
 
 Given the .arith and the .in files, it's possible to use command line directly to run the jsnark-libsnark interface. You can use the executable interface `run_ppzksnark` that appears in `jsnark/libsnark/build/libsnark/jsnark_interface` to run the libsnark algorithms on the circuit. The executable currently allows to run the proof systems `r1cs_ppzksnark` (default) and `r1cs_gg_ppzksnark` implemented in libsnark. To run the first, the executable just takes two arguments: the arithmetic circuit file path, and a sample input file path. To run the `r1cs_gg_ppzksnark` proof system [Gro16], the first argument should be `gg`, followed by the arithmetic circuit file path, and the sample input file path.
+```
+$ ./jsnark/libsnark/build/libsnark/jsnark_interface/run_ppzksnark $(PATH_TO)/Sudoku9x9.arith $(PATH_TO)/Sudoku9x9_Sample_Run1.in
+$ ./jsnark/libsnark/build/libsnark/jsnark_interface/run_ppzksnark gg $(PATH_TO)/Sudoku9x9.arith $(PATH_TO)/Sudoku9x9_Sample_Run1.in
+```
 	
 #### Further Notes
 
